@@ -43,7 +43,7 @@ export const Navbar = () => {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-3xl",
         scrolled
-          ? "bg-background/80 backdrop-blur-md shadow-lg"
+          ? "bg-background/80 backdrop-blur-md"
           : "bg-transparent"
       )}
     >

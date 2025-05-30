@@ -7,6 +7,7 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { StatsSection } from "@/components/StatsSection";
 import { CanvasRevealEffectDemo3 } from "@/components/ServicesSection";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const logos = [
@@ -122,7 +123,7 @@ export default function Home() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col justify-center items-center  mx-auto px-48"
+        className="relative flex flex-col justify-center items-center mx-auto px-48 mb-96 pb-36"
       >
         <h2 className="text-center text-4xl font-bold mb-8">Our Services</h2>
         <CanvasRevealEffectDemo3 />
@@ -136,10 +137,11 @@ export default function Home() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col justify-center items-center  pt-60 gap-4"
+        className="relative flex flex-col justify-center items-center mt-96 gap-4"
       >
         <StatsSection stats={stats} />
       </motion.div>
+      <Footer />
     </main>
   );
 }
