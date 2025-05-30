@@ -52,7 +52,7 @@ export default function Home() {
       <Navbar />
       <GridBackgroundDemo />
       <LampContainer />
-      <motion.div className="relative flex flex-col justify-center items-center  pt-60 gap-4 mb-20">
+      <motion.div className="relative flex flex-col justify-center items-center pt-60 gap-4 mb-36">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className=" bg-gradient-to-br from-black to-accent dark:from-white dark:to-accent bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-8xl "
+          className=" bg-gradient-to-br from-black to-accent dark:from-white dark:to-accent bg-clip-text text-center text-3xl font-bold tracking-tight text-transparent md:text-7xl "
         >
           Built to Secure
           <br />
@@ -76,7 +76,7 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="text-center text-muted-foreground mx-auto text-3xl"
+          className="text-center text-muted-foreground mx-auto text-2xl"
         >
           From cyber range simulations to vulnerability assessments.
         </motion.p>
@@ -99,6 +99,7 @@ export default function Home() {
           </HoverBorderGradient>
         </motion.div>
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -107,9 +108,10 @@ export default function Home() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col justify-center items-center  pt-60 gap-4"
+        className="relative flex flex-col justify-center items-center mb-48 w-1/2 mx-auto overflow-hidden gap-8"
       >
-        <StatsSection stats={stats} />
+        <p className="text-muted">Affiliated with</p>
+        <InfiniteMovingCards items={logos} direction="right" speed="fast" />
       </motion.div>
 
       <motion.div
@@ -126,8 +128,17 @@ export default function Home() {
         <CanvasRevealEffectDemo3 />
       </motion.div>
 
-      <motion.div className="py-12 w-1/2 mx-auto overflow-hidden pt-64">
-        <InfiniteMovingCards items={logos} direction="right" speed="fast" />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.7,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col justify-center items-center  pt-60 gap-4"
+      >
+        <StatsSection stats={stats} />
       </motion.div>
     </main>
   );

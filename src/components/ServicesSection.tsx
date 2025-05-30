@@ -5,12 +5,36 @@ import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 
 const services = [
-  { title: "Consulting & Advisory", icon: <Settings size={"30px"} /> },
-  { title: "Network Solutions", icon: <Settings size={"30px"} /> },
-  { title: "Consulting & Advisory", icon: <Settings size={"30px"} /> },
-  { title: "Network Solutions", icon: <Settings size={"30px"} /> },
-  { title: "Consulting & Advisory", icon: <Settings size={"30px"} /> },
-  { title: "Network Solutions", icon: <Settings size={"30px"} /> },
+  {
+    title: "Consulting & Advisory",
+    icon: <Settings size={"30px"} />,
+    desc: "Cyber Range is used to validate the security posture of client's networks with real applications and a complete range of threat vectors. By simulating real-world legitimate traffic.",
+  },
+  {
+    title: "Network Solutions",
+    icon: <Settings size={"30px"} />,
+    desc: "Cyber Range is used to validate the security posture of client's networks with real applications and a complete range of threat vectors. By simulating real-world legitimate traffic.",
+  },
+  {
+    title: "Consulting & Advisory",
+    icon: <Settings size={"30px"} />,
+    desc: "Cyber Range is used to validate the security posture of client's networks with real applications and a complete range of threat vectors. By simulating real-world legitimate traffic.",
+  },
+  {
+    title: "Network Solutions",
+    icon: <Settings size={"30px"} />,
+    desc: "Cyber Range is used to validate the security posture of client's networks with real applications and a complete range of threat vectors. By simulating real-world legitimate traffic.",
+  },
+  {
+    title: "Consulting & Advisory",
+    icon: <Settings size={"30px"} />,
+    desc: "Cyber Range is used to validate the security posture of client's networks with real applications and a complete range of threat vectors. By simulating real-world legitimate traffic.",
+  },
+  {
+    title: "Network Solutions",
+    icon: <Settings size={"30px"} />,
+    desc: "Cyber Range is used to validate the security posture of client's networks with real applications and a complete range of threat vectors. By simulating real-world legitimate traffic.",
+  },
 ];
 
 export function CanvasRevealEffectDemo3() {
@@ -26,23 +50,42 @@ export function CanvasRevealEffectDemo3() {
             onMouseLeave={() => setHoveredIndex(null)}
             className="relative rounded-[40px] border-4 border-neutral-800 hover:border-primary/20 bg-background overflow-hidden group transition-all duration-300 h-[300px] md:min-h-[400px] cursor-pointer hover:scale-105"
           >
-            {/* Bottom-centered semi-circle radial overlay */}
             <div className="absolute translate-y-36 inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.6)_0%,_transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-800 pointer-events-none" />
 
-            {/* Card content */}
             <div className="relative z-10 px-10 py-12 h-full flex flex-col justify-between text-white">
-              {/* Top-left icon */}
               <div className="text-9xl text-white opacity-60">
                 {service.icon}
               </div>
 
-              {/* Bottom-left title */}
-              <h3 className="text-3xl font-regular leading-tight mt-auto max-w-3xs">
-                {service.title}
-              </h3>
+              <div className="relative h-[100px] mt-auto">
+                <AnimatePresence mode="wait">
+                  {hoveredIndex === index ? (
+                    <motion.p
+                      key="description"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3 }}
+                      className="md:text-md text-sm -mt-18 text-white/80 "
+                    >
+                      {service.desc}
+                    </motion.p>
+                  ) : (
+                    <motion.h3
+                      key="title"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-3xl font-regular leading-tight max-w-3xs"
+                    >
+                      {service.title}
+                    </motion.h3>
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
 
-            {/* Canvas Reveal Effect on hover */}
             <AnimatePresence>
               {hoveredIndex === index && (
                 <motion.div

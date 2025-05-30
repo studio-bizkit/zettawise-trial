@@ -90,7 +90,7 @@ export const InfiniteMovingCards = ({
             className="relative w-[30px] max-w-full shrink-0 rounded-2xl bg-transparent px-4 py-2 md:w-[150px]"
             key={item.alt}
           >
-            <div className="relative h-[30px] w-full">
+            <div className="relative h-[40px] w-full">
               <Image
                 src={item.image}
                 alt={item.alt}

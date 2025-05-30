@@ -63,7 +63,7 @@ export const Navbar = () => {
               <motion.a
                 key={item.label}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-100 font-thin"
+                className="text-foreground hover:text-primary transition-colors duration-100 font-regular"
               >
                 {item.label}
               </motion.a>
