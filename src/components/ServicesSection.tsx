@@ -48,42 +48,18 @@ export function CanvasRevealEffectDemo3() {
             key={index}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="relative rounded-[40px] border-4 border-neutral-800 hover:border-primary/20 bg-background overflow-hidden group transition-all duration-300 h-[300px] md:min-h-[400px] cursor-pointer hover:scale-105"
+            className="relative rounded-[40px] border-4 border-neutral-200 dark:border-neutral-800 hover:border-primary/20 bg-white dark:bg-background overflow-hidden group transition-all duration-300 h-[300px] md:min-h-[400px] cursor-pointer hover:scale-105"
           >
-            <div className="absolute translate-y-36 inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.6)_0%,_transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-800 pointer-events-none" />
+            <div className="absolute translate-y-36 inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.1)_0%,_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.6)_0%,_transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-800 pointer-events-none" />
 
-            <div className="relative z-10 px-10 py-12 h-full flex flex-col justify-between text-white">
-              <div className="text-9xl text-white opacity-60">
+            <div className="relative z-10 px-10 py-12 h-full flex flex-col justify-between text-black dark:text-white">
+              <div className="text-9xl text-black/60 dark:text-white/60">
                 {service.icon}
               </div>
 
-              <div className="relative h-[100px] mt-auto">
-                <AnimatePresence mode="wait">
-                  {hoveredIndex === index ? (
-                    <motion.p
-                      key="description"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.3 }}
-                      className="md:text-md text-sm -mt-18 text-white/80 "
-                    >
-                      {service.desc}
-                    </motion.p>
-                  ) : (
-                    <motion.h3
-                      key="title"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-3xl font-regular leading-tight max-w-3xs"
-                    >
-                      {service.title}
-                    </motion.h3>
-                  )}
-                </AnimatePresence>
-              </div>
+              <h3 className="text-3xl font-regular leading-tight mt-auto max-w-3xs text-black dark:text-white">
+                {service.title}
+              </h3>
             </div>
 
             <AnimatePresence>

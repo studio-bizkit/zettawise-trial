@@ -49,11 +49,11 @@ export default function Home() {
   ];
 
   return (
-    <main className="w-full min-h-screen bg-background  items-center justify-center">
+    <main className="w-full min-h-screen bg-background items-center justify-center">
       <Navbar />
       <GridBackgroundDemo />
       <LampContainer />
-      <motion.div className="relative flex flex-col justify-center items-center pt-60 gap-4 mb-36">
+      <motion.div className="relative flex flex-col justify-center items-center pt-32 md:pt-60 gap-4 mb-24 md:mb-36 px-4 md:px-0">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className=" bg-gradient-to-br from-black to-accent dark:from-white dark:to-accent bg-clip-text text-center text-3xl font-bold tracking-tight text-transparent md:text-7xl "
+          className="bg-gradient-to-br from-black to-accent dark:from-white dark:to-accent bg-clip-text text-center text-3xl font-bold tracking-tight text-transparent md:text-7xl px-4 md:px-0"
         >
           Built to Secure
           <br />
@@ -77,7 +77,7 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="text-center text-muted-foreground mx-auto text-2xl"
+          className="text-center text-muted-foreground mx-auto text-lg md:text-2xl px-4 md:px-0"
         >
           From cyber range simulations to vulnerability assessments.
         </motion.p>
@@ -94,7 +94,7 @@ export default function Home() {
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
-            className="bg-background text-black dark:text-white flex items-center px-12"
+            className="bg-background text-black dark:text-white flex items-center px-8 md:px-12"
           >
             Explore
           </HoverBorderGradient>
@@ -109,38 +109,40 @@ export default function Home() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col justify-center items-center mb-48 w-1/2 mx-auto overflow-hidden gap-8"
+        className="relative flex flex-col justify-center items-center mb-24 md:mb-48 w-full md:w-1/2 mx-auto overflow-hidden gap-8 px-4 md:px-0"
       >
         <p className="text-muted">Affiliated with</p>
         <InfiniteMovingCards items={logos} direction="right" speed="fast" />
       </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.7,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="relative flex flex-col justify-center items-center mx-auto px-48 mb-96 pb-36"
-      >
-        <h2 className="text-center text-4xl font-bold mb-8">Our Services</h2>
-        <CanvasRevealEffectDemo3 />
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.7,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="relative flex flex-col justify-center items-center mt-96 gap-4"
-      >
-        <StatsSection stats={stats} />
-      </motion.div>
+      <div className="relative flex flex-col gap-96 md:gap-48">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.7,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="relative flex flex-col w-full justify-center items-center mx-auto px-12 md:px-48"
+        >
+          <h2 className="text-center text-3xl md:text-4xl font- mb-2">
+            Our Services
+          </h2>
+          <CanvasRevealEffectDemo3 />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.7,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="relative md:flex flex-col justify-center items-center px-4 md:px-0 hidden"
+        >
+          <StatsSection stats={stats} />
+        </motion.div>
+      </div>
       <Footer />
     </main>
   );

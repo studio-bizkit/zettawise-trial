@@ -42,7 +42,9 @@ export const CanvasRevealEffect = ({
         />
       </div>
       {showGradient && (
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.9)_0%,_transparent_80%)]" />
+        <div
+          className="absolute inset-0 dark:bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.9)_0%,_transparent_80%)]"
+        />
       )}
     </div>
   );
@@ -175,7 +177,13 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
   );
 };
 
-type UniformValue = number | number[] | number[][] | THREE.Vector2 | THREE.Vector3 | THREE.Vector3[];
+type UniformValue =
+  | number
+  | number[]
+  | number[][]
+  | THREE.Vector2
+  | THREE.Vector3
+  | THREE.Vector3[];
 type UniformType = "1f" | "3f" | "1fv" | "3fv" | "2f";
 
 interface PreparedUniform {
@@ -240,7 +248,7 @@ const ShaderMaterial = ({
           break;
         case "uniform3fv":
           preparedUniforms[uniformName] = {
-            value: (uniform.value as number[][]).map((v) =>
+            value: (uniform.value as number[][]).map(v =>
               new THREE.Vector3().fromArray(v)
             ),
             type: "3fv",
