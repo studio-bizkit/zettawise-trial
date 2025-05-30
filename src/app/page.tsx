@@ -62,7 +62,7 @@ export default function Home() {
           }}
           className="mt-[250px] bg-gradient-to-br from-black to-accent dark:from-white dark:to-accent bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-8xl"
         >
-          Built to Secure <br />
+          Built to Secure<br />
           Critical Infrastructure
         </motion.h1>
 
