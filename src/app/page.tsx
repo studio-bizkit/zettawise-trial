@@ -51,7 +51,8 @@ export default function Home() {
     <main className="w-full min-h-screen bg-background  items-center justify-center">
       <Navbar />
       <GridBackgroundDemo />
-      <LampContainer>
+      <LampContainer />
+      <motion.div className="relative flex flex-col justify-center items-center  pt-60 gap-4 mb-20">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,9 +61,10 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-[250px] bg-gradient-to-br from-black to-accent dark:from-white dark:to-accent bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-8xl"
+          className=" bg-gradient-to-br from-black to-accent dark:from-white dark:to-accent bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-8xl "
         >
-          Built to Secure<br />
+          Built to Secure
+          <br />
           Critical Infrastructure
         </motion.h1>
 
@@ -74,7 +76,7 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-4 text-center text-muted-foreground mx-auto text-3xl"
+          className="text-center text-muted-foreground mx-auto text-3xl"
         >
           From cyber range simulations to vulnerability assessments.
         </motion.p>
@@ -86,7 +88,7 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-12 flex gap-4"
+          className="mt-4 flex gap-4"
         >
           <HoverBorderGradient
             containerClassName="rounded-full"
@@ -96,7 +98,7 @@ export default function Home() {
             Explore
           </HoverBorderGradient>
         </motion.div>
-      </LampContainer>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -105,11 +107,11 @@ export default function Home() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="py-2 mx-auto"
+        className="relative flex flex-col justify-center items-center  pt-60 gap-4"
       >
         <StatsSection stats={stats} />
       </motion.div>
-      {/* Our Services Section */}
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -118,7 +120,7 @@ export default function Home() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="py-2 mx-auto px-48"
+        className="relative flex flex-col justify-center items-center  mx-auto px-48"
       >
         <h2 className="text-center text-4xl font-bold mb-8">Our Services</h2>
         <CanvasRevealEffectDemo3 />

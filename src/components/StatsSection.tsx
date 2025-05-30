@@ -19,7 +19,7 @@ export const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             key={index}
             className={`${index < 2 ? "text-left" : "text-right"}`}
           >
-            <div className="text-5xl"><HyperText duration={1200} delay={index*100}>{stat.value}</HyperText></div>
+            <div className="text-5xl text-black/80 dark:text-white/80"><HyperText duration={1200} delay={index*100}>{stat.value}</HyperText></div>
             <div className="text-sm text-muted-foreground">{stat.label}</div>
           </div>
         ))}

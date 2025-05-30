@@ -4,11 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "../themeToggle";
-import { useTheme } from "next-themes";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const { theme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,11 +28,10 @@ export const Navbar = () => {
 
   if (!mounted) return null;
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
 
   const menuItems = [
     { href: "#", label: "Home" },
-    { href: "#", label: "Features" },
+    { href: "#", label: "Services" },
     { href: "#", label: "About" },
     { href: "#", label: "Contact" },
   ];
@@ -53,22 +50,20 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            {currentTheme === "dark" ? (
-              <img src="/images/logo.png" alt="logo" className="h-6" />
-            ) : (
-              <img src="/images/logo-black.png" alt="logo" className="h-6" />
-            )}
+            <img
+              src="/images/logo.png"
+              alt="logo"
+              className="h-6 dark:invert-0 invert-100"
+            />
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
-            {menuItems.map((item) => (
+            {menuItems.map(item => (
               <motion.a
                 key={item.label}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="text-foreground hover:text-primary transition-colors duration-100 font-thin"
               >
                 {item.label}
               </motion.a>
@@ -99,7 +94,7 @@ export const Navbar = () => {
               className="md:hidden"
             >
               <div className="py-4 space-y-4">
-                {menuItems.map((item) => (
+                {menuItems.map(item => (
                   <motion.a
                     key={item.label}
                     href={item.href}
