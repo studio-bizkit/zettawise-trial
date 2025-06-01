@@ -2,12 +2,14 @@
 import { Navbar } from "@/components/ui/navbar";
 import { LampContainer } from "@/components/ui/lamp-effect";
 import { motion } from "framer-motion";
-import { GridBackgroundDemo } from "@/components/ui/grid-background";
+// import { GridBackgroundDemo } from "@/components/ui/grid-background";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { StatsSection } from "@/components/StatsSection";
 import { CanvasRevealEffectDemo3 } from "@/components/ServicesSection";
 import { Footer } from "@/components/Footer";
+import SectorSection from "@/components/SectorSection";
+import { FlickerBackgroundDemo } from "@/components/ui/flickering-grid";
 
 export default function Home() {
   const logos = [
@@ -51,9 +53,10 @@ export default function Home() {
   return (
     <main className="w-full min-h-screen bg-background items-center justify-center">
       <Navbar />
-      <GridBackgroundDemo />
+      <FlickerBackgroundDemo />
+      {/* <GridBackgroundDemo /> */}
       <LampContainer />
-      <motion.div className="relative flex flex-col justify-center items-center pt-32 md:pt-60 gap-4 mb-24 md:mb-36 px-4 md:px-0">
+      <motion.div className="relative flex flex-col justify-center items-center pt-32 md:pt-80 gap-4 mb-24 md:mb-36 px-4 md:px-0">
         <motion.h1
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,11 +128,13 @@ export default function Home() {
           }}
           className="relative flex flex-col w-full justify-center items-center mx-auto px-12 md:px-48"
         >
-          <h2 className="text-center text-3xl md:text-4xl font- mb-2">
+          <h2 className="text-center text-3xl md:text-4xl mb-2">
             Our Services
           </h2>
           <CanvasRevealEffectDemo3 />
         </motion.div>
+      </div>
+      <div className="relative flex flex-col gap-96 md:gap-48 mb-32 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -142,6 +147,10 @@ export default function Home() {
         >
           <StatsSection stats={stats} />
         </motion.div>
+      </div>
+      <div className="relative flex flex-col px-24 md:px-56 gap-96 md:gap-12 pb-24">
+        <h2 className="text-center text-3xl md:text-4xl mb-2">Sectors</h2>
+        <SectorSection />
       </div>
       <Footer />
     </main>

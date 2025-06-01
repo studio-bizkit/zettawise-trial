@@ -26,7 +26,6 @@ export const metadata: Metadata = {
   creator: "Studio Bizkit",
   publisher: "Studio Bizkit",
   metadataBase: new URL("https://www.studiobizkit.com"),
-  themeColor: "#ee3224",
   openGraph: {
     title: "Zettwise - Studio Bizkit",
     description: "A project by Studio Bizkit. Visit www.studiobizkit.com to learn more.",

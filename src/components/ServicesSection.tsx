@@ -41,26 +41,26 @@ export function CanvasRevealEffectDemo3() {
   const [hoveredIndex, setHoveredIndex] = React.useState<number | null>(null);
 
   return (
-    <div className="h-[40rem] w-full relative">
+    <div className="h-[40rem] w-full relative mb-96 md:mb-72 ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            className="relative rounded-[40px] border-4 border-neutral-200 dark:border-neutral-800 hover:border-primary/20 bg-white dark:bg-background overflow-hidden group transition-all duration-300 h-[300px] md:min-h-[400px] cursor-pointer hover:scale-105"
-          >
-            <div className="absolute translate-y-36 inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.1)_0%,_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.6)_0%,_transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-800 pointer-events-none" />
+          {services.map((service, index) => (
+            <div
+              key={index}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className="relative rounded-[40px] border-4 border-neutral-200 dark:border-neutral-800 hover:border-primary/20 bg-white dark:bg-background overflow-hidden group transition-all duration-300 h-[300px] md:min-h-[400px] cursor-pointer hover:scale-105"
+            >
+              <div className="absolute translate-y-36 inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.1)_0%,_transparent_70%)] dark:bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.6)_0%,_transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-800 pointer-events-none" />
 
-            <div className="relative z-10 px-10 py-12 h-full flex flex-col justify-between text-black dark:text-white">
-              <div className="text-9xl text-black/60 dark:text-white/60">
-                {service.icon}
+              <div className="z-10 relative px-10 py-12 h-full flex flex-col justify-between text-black dark:text-white">
+                <div className="text-9xl text-black/60 dark:text-white/60">
+                  {service.icon}
+                </div>
+
+                <h3 className="text-3xl font-regular leading-tight mt-auto max-w-3xs text-black dark:text-white">
+                  {service.title}
+                </h3>
               </div>
-
-              <h3 className="text-3xl font-regular leading-tight mt-auto max-w-3xs text-black dark:text-white">
-                {service.title}
-              </h3>
-            </div>
 
             <AnimatePresence>
               {hoveredIndex === index && (
@@ -68,7 +68,7 @@ export function CanvasRevealEffectDemo3() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="absolute inset-0"
+                  className="absolute inset-0 s"
                 >
                   <CanvasRevealEffect
                     animationSpeed={5}
