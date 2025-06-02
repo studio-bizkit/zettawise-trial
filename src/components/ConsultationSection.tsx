@@ -52,7 +52,7 @@ export const ConsultationSection = () => {
         as="button"
         className="bg-[#172320] text-primary dark:text-primary flex items-center px-8 md:px-12"
       >
-        Get consultation <ArrowRight className="ml-2" />
+        {/* Get consultation <ArrowRight className="ml-2"  /> */}
       </HoverBorderGradient>
     </motion.div>
   );
