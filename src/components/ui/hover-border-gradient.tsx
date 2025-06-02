@@ -71,7 +71,7 @@ export function HoverBorderGradient<T extends React.ElementType = "button">({
     <>
       <div
         className={cn(
-          "w-auto text-white z-10 bg-black px-4 py-2 rounded-[inherit]",
+          "w-auto text-white z-10 px-4 py-2 rounded-[inherit]",
           className
         )}
       >
@@ -95,7 +95,7 @@ export function HoverBorderGradient<T extends React.ElementType = "button">({
         }}
         transition={{ ease: "linear", duration: duration ?? 1 }}
       />
-      <div className="bg-black absolute z-1 flex-none inset-[2px] rounded-[100px]" />
+      <div className="absolute z-1 flex-none inset-[2px] rounded-[100px]" />
     </>
   );
 }

@@ -39,6 +39,7 @@
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
+  --font-cursive: var(--font-custom-cursive);
   --font-serif: serif;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -106,6 +107,7 @@
   --sidebar-border: oklch(0.9276 0.0058 264.5313);
   --sidebar-ring: oklch(0.6664 0.0884 175.0113);
   --font-sans: var(--font-inter);
+  --font-cursive: var(--font-custom-cursive);
   --font-serif: serif;
   --font-mono: var(--font-geist-mono);
   --radius: 0.5rem;
@@ -154,6 +156,7 @@
   --sidebar-border: oklch(0.2686 0 0);
   --sidebar-ring: oklch(0.6664 0.0884 175.0113);
   --font-sans: var(--font-inter);
+  --font-cursive: var(--font-custom-cursive);
   --font-serif: serif;
   --font-mono: var(--font-geist-mono);
   --radius: 0.5rem;

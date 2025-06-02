@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "../themeToggle";
+import { Button } from "./button";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +29,6 @@ export const Navbar = () => {
 
   if (!mounted) return null;
 
-
   const menuItems = [
     { href: "#", label: "Home" },
     { href: "#", label: "Services" },
@@ -42,9 +42,7 @@ export const Navbar = () => {
       animate={{ y: 0 }}
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-3xl",
-        scrolled
-          ? "bg-background/80 backdrop-blur-md"
-          : "bg-transparent"
+        scrolled ? "bg-background/80 backdrop-blur-md" : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4">
@@ -63,11 +61,17 @@ export const Navbar = () => {
               <motion.a
                 key={item.label}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-100 font-regular"
+                className="text-foreground hover:text-primary transition-colors duration-100 font-regular text-xs"
               >
                 {item.label}
               </motion.a>
             ))}
+            <Button
+              size={"sm"}
+              className="bg-transparent text-primary text-xs border-primary border-1 rounded-3xl hover:text-white"
+            >
+              Get Consultation
+            </Button>
             <ModeToggle />
           </div>
 
@@ -105,6 +109,12 @@ export const Navbar = () => {
                     {item.label}
                   </motion.a>
                 ))}
+                <Button
+                  size={"sm"}
+                  className="bg-transparent text-primary text-xs border-primary border-1 rounded-3xl hover:text-white"
+                >
+                  Get Consultation
+                </Button>
               </div>
             </motion.div>
           )}

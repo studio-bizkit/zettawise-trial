@@ -72,7 +72,7 @@ const testimonials = [
     name: "Aditya Birla Group",
     img: "/images/clients/2.png",
   },
-  { name: "Bandhan Financial Services", img: "/images/clients/3.png" },
+  { name: "Bandhan Finance", img: "/images/clients/3.png" },
   { name: "TCG Crest", img: "/images/clients/4.png" },
   { name: "Power System Operation Corporation", img: "/images/clients/5.png" },
   { name: "Medica Super Speciality Hospital", img: "/images/clients/6.png" },
@@ -95,7 +95,7 @@ const testimonials = [
   { name: "Pricoris", img: "/images/clients/20.png" },
   { name: "NOQODI (Dubai)", img: "/images/clients/21.png" },
   { name: "Emaratech (Dubai)", img: "/images/clients/22.png" },
-  { name: "Electrosteel Castings Limited", img: "/images/clients/23.png" },
+  { name: "Electrosteel Castings", img: "/images/clients/23.png" },
   { name: "ICRA Analytics", img: "/images/clients/24.png" },
   {
     name: "Central Board Of Irrigation & Power",
@@ -110,9 +110,13 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="container py-10">
       <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
-        Our Trusted Clients
+        Our Trusted{" "}
+        <span className="text-primary tracking-normal font-cursive italic text-6xl leading-0">
+          {" "}
+          Clients
+        </span>
       </h2>
-      <h3 className="mx-auto mb-8 max-w-lg text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
+      <h3 className="mx-auto mb-12 max-w-lg text-balance text-center text-lg font-medium tracking-tight text-foreground/80">
         We&apos;re proud to partner with industry leaders and innovative
         organizations <span className="text-primary">worldwide</span>
       </h3>

@@ -1,5 +1,4 @@
 "use client";
-import { Navbar } from "@/components/ui/navbar";
 import { LampContainer } from "@/components/ui/lamp-effect";
 import { motion } from "framer-motion";
 // import { GridBackgroundDemo } from "@/components/ui/grid-background";
@@ -7,10 +6,10 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { StatsSection } from "@/components/StatsSection";
 import { CanvasRevealEffectDemo3 } from "@/components/ServicesSection";
-import { Footer } from "@/components/Footer";
 import SectorSection from "@/components/SectorSection";
 import { FlickerBackgroundDemo } from "@/components/ui/flickering-grid";
 import { Testimonials } from "@/components/ui/testimonials";
+import { ConsultationSection } from "@/components/ConsultationSection";
 
 export default function Home() {
   const logos = [
@@ -53,7 +52,6 @@ export default function Home() {
 
   return (
     <main className="w-full min-h-screen bg-background items-center justify-center">
-      <Navbar />
       {/* <NavbarDemo /> */}
       <FlickerBackgroundDemo />
       {/* <GridBackgroundDemo /> */}
@@ -130,13 +128,17 @@ export default function Home() {
           }}
           className="relative flex flex-col w-full justify-center items-center mx-auto px-12 md:px-48"
         >
-          <h2 className="text-center text-3xl md:text-4xl mb-2">
-            Our Services
+          <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
+            Offered
+            <span className="text-primary text-center tracking-normal font-cursive italic text-6xl leading-0">
+              {" "}
+              Services
+            </span>
           </h2>
           <CanvasRevealEffectDemo3 />
         </motion.div>
       </div>
-      <div className="relative flex flex-col gap-96 md:gap-48 mb-32 md:mb-24">
+      <div className="relative flex flex-col gap-96 md:gap-48 mb-32 md:mb-36 mt-12 md:mt-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -160,7 +162,12 @@ export default function Home() {
         }}
         className="relative flex flex-col px-24 md:px-56 gap-96 md:gap-12 pb-24"
       >
-        <h2 className="text-center text-3xl md:text-4xl mb-2">Sectors</h2>
+        <h2 className="mb-4 text-center text-5xl font-bold leading-[1.2] tracking-tighter text-foreground">
+          <span className="text-primary text-center tracking-normal font-cursive italic text-6xl leading-0">
+            Sectors{" "}
+          </span>
+          we focus
+        </h2>
         <SectorSection />
       </motion.div>
       <motion.div
@@ -175,7 +182,18 @@ export default function Home() {
       >
         <Testimonials />
       </motion.div>
-      <Footer />
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.7,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col px-24 md:px-56 gap-96 md:gap-12 pb-24"
+      >
+        <ConsultationSection />
+      </motion.div>
     </main>
   );
 }
