@@ -3,6 +3,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 // import { FlickeringGrid } from "./ui/flickering-grid";
 // import { useEffect, useState } from "react";
 import { GridBackgroundDemo } from "./ui/grid-background";
+import { ArrowRight } from "lucide-react";
 
 export const ConsultationSection = () => {
   // const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -51,7 +52,7 @@ export const ConsultationSection = () => {
         as="button"
         className="bg-[#172320] text-primary dark:text-primary flex items-center px-8 md:px-12"
       >
-        Get consultation →
+        Get consultation <ArrowRight className="ml-2" />
       </HoverBorderGradient>
     </motion.div>
   );
