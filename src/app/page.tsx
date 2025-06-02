@@ -53,6 +53,7 @@ export default function Home() {
   return (
     <main className="w-full min-h-screen bg-background items-center justify-center">
       <Navbar />
+      {/* <NavbarDemo /> */}
       <FlickerBackgroundDemo />
       {/* <GridBackgroundDemo /> */}
       <LampContainer />
@@ -148,10 +149,19 @@ export default function Home() {
           <StatsSection stats={stats} />
         </motion.div>
       </div>
-      <div className="relative flex flex-col px-24 md:px-56 gap-96 md:gap-12 pb-24">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.7,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col px-24 md:px-56 gap-96 md:gap-12 pb-24"
+      >
         <h2 className="text-center text-3xl md:text-4xl mb-2">Sectors</h2>
         <SectorSection />
-      </div>
+      </motion.div>
       <Footer />
     </main>
   );

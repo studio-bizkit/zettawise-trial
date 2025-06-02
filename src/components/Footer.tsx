@@ -43,19 +43,16 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative w-full border-t border-neutral-800 bg-background">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-      
+    <footer className="relative w-full border-t dark:border-neutral-800 border-neutral-800/30 bg-background">
       <div className="relative mx-auto max-w-7xl px-4 py-12 md:py-16">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-          {footerLinks.map((section) => (
+          {footerLinks.map(section => (
             <div key={section.title}>
               <h3 className="text-sm font-semibold text-foreground/80 mb-4">
                 {section.title}
               </h3>
               <ul className="space-y-3">
-                {section.links.map((link) => (
+                {section.links.map(link => (
                   <motion.li
                     key={link.name}
                     whileHover={{ x: 5 }}
@@ -74,9 +71,9 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between border-t border-neutral-800 pt-8 md:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between border-t dark:border-neutral-800 border-neutral-800/30 pt-8 md:flex-row">
           <div className="flex space-x-4">
-            {socialLinks.map((social) => (
+            {socialLinks.map(social => (
               <motion.a
                 key={social.label}
                 href={social.href}
@@ -89,8 +86,8 @@ export function Footer() {
               </motion.a>
             ))}
           </div>
-          
-          <motion.p 
+
+          <motion.p
             className="mt-4 text-sm text-muted-foreground md:mt-0"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,4 +99,4 @@ export function Footer() {
       </div>
     </footer>
   );
-} 
+}

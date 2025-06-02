@@ -42,9 +42,7 @@ export const CanvasRevealEffect = ({
         />
       </div>
       {showGradient && (
-        <div
-          className="absolute inset-0 dark:bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.9)_0%,_transparent_80%)]"
-        />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(256,256,256,0.9)_40%,_rgba(256,256,256,0.7)_60%,_transparent_140%)] dark:bg-[radial-gradient(circle_at_bottom,_rgba(0,0,0,0.9)_40%,_rgba(0,0,0,0.7)_60%,_transparent_140%)]" />
       )}
     </div>
   );
