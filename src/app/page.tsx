@@ -10,6 +10,7 @@ import { CanvasRevealEffectDemo3 } from "@/components/ServicesSection";
 import { Footer } from "@/components/Footer";
 import SectorSection from "@/components/SectorSection";
 import { FlickerBackgroundDemo } from "@/components/ui/flickering-grid";
+import { Testimonials } from "@/components/ui/testimonials";
 
 export default function Home() {
   const logos = [
@@ -161,6 +162,18 @@ export default function Home() {
       >
         <h2 className="text-center text-3xl md:text-4xl mb-2">Sectors</h2>
         <SectorSection />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.7,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col px-24 md:px-56 gap-96 md:gap-12 pb-24"
+      >
+        <Testimonials />
       </motion.div>
       <Footer />
     </main>
