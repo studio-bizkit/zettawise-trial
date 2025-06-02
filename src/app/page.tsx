@@ -10,6 +10,7 @@ import { CanvasRevealEffectDemo3 } from "@/components/ServicesSection";
 import { Footer } from "@/components/Footer";
 import SectorSection from "@/components/SectorSection";
 import { FlickerBackgroundDemo } from "@/components/ui/flickering-grid";
+import { BlurVignette } from "@/components/ui/blur-vignette";
 
 export default function Home() {
   const logos = [
@@ -52,8 +53,16 @@ export default function Home() {
 
   return (
     <main className="w-full min-h-screen bg-background items-center justify-center">
+      <BlurVignette
+        radius="0px"
+        inset="0px"
+        transitionLength="200px"
+        blur="100px"
+        switchView={false}
+        className=""
+      />
       <Navbar />
-      {/* <NavbarDemo /> */}
+      {/* <Spotlight /> */}
       <FlickerBackgroundDemo />
       {/* <GridBackgroundDemo /> */}
       <LampContainer />

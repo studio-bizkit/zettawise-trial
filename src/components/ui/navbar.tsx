@@ -41,10 +41,8 @@ export const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-3xl",
-        scrolled
-          ? "bg-background/80 backdrop-blur-md"
-          : "bg-transparent"
+        "fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-",
+
       )}
     >
       <div className="container mx-auto px-4">
