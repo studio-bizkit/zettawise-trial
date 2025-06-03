@@ -118,9 +118,9 @@ export function CanvasRevealEffectDemo3() {
                   {/* Desktop-only hover hint */}
                   {hoveredIndex !== index && expandedCard !== index && (
                     <div className="mt-auto">
-                      <div className="hidden md:block text-black/50 dark:text-white/50 text-sm">
+                      {/* <div className="hidden md:block text-black/50 dark:text-white/50 text-sm">
                         Hover to learn more
-                      </div>
+                      </div> */}
                       <div className="md:hidden text-black/50 dark:text-white/50 text-sm">
                         Tap to learn more
                       </div>
