@@ -1,6 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { Building2, GitBranch, Network, Search, Shield, Users } from "lucide-react";
+import {
+  Building2,
+  GitBranch,
+  Network,
+  Search,
+  Shield,
+  Users,
+} from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 
@@ -8,33 +15,33 @@ const services = [
   {
     icon: <Users size={"35px"} />,
     title: "Consulting & Advisory",
-    desc: "Enterprises face evolving cyber threats and strict regulations, making effective cybersecurity programs essential."
+    desc: "Enterprises face evolving cyber threats and strict regulations, making effective cybersecurity programs essential.",
   },
   {
     icon: <Shield size={"35px"} />,
     title: "Cyber Range for OT & IT",
-    desc: "Multiple security tools increase complexity, risking performance and network resilience."
+    desc: "Multiple security tools increase complexity, risking performance and network resilience.",
   },
   {
     icon: <Search size={"35px"} />,
     title: "IT & OT Security Assessment",
-    desc: "Assess your digital network’s security to improve resilience and reduce cyber-attack risks."
+    desc: "Assess your digital network’s security to improve resilience and reduce cyber-attack risks.",
   },
   {
     icon: <GitBranch size={"35px"} />,
     title: "Security in DevOps",
-    desc: "Integrate security automation throughout the software development lifecycle for safer releases."
+    desc: "Integrate security automation throughout the software development lifecycle for safer releases.",
   },
   {
     icon: <Building2 size={"35px"} />,
     title: "OEM Centric Solutions",
-    desc: "Acting as System Integrators, we provide tailored security services for better fitment."
+    desc: "Acting as System Integrators, we provide tailored security services for better fitment.",
   },
   {
     icon: <Network size={"35px"} />,
     title: "Network Solutions",
-    desc: "Thoroughly assess network hardware, software, and setup to understand your infrastructure."
-  }
+    desc: "Thoroughly assess network hardware, software, and setup to understand your infrastructure.",
+  },
 ];
 
 export function CanvasRevealEffectDemo3() {
@@ -142,8 +149,8 @@ export function CanvasRevealEffectDemo3() {
                       animationSpeed={5}
                       containerClassName="bg-transparent"
                       colors={[
-                        [58, 166, 143],
-                        [58, 166, 143],
+                        [211, 37, 37],
+                        [211, 37, 37],
                       ]}
                       opacities={[
                         0.2, 0.2, 0.2, 0.3, 0.3, 0.4, 0.4, 0.5, 0.5, 1,

@@ -41,18 +41,18 @@ export const ConsultationSection = () => {
     >
       <GridBackgroundDemo half="bottom" />
       {/* <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent z-[5]" /> */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-3/4 w-full max-w-[1000px] h-[600px] blur-3xl z-[5] opacity-40" style={{ background: 'radial-gradient(circle, #3aa68f 40%, #3aa68f00 180%)' }} />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-3/4 w-full max-w-[1000px] h-[600px] blur-3xl z-[5] opacity-40" style={{ background: 'radial-gradient(circle, #d32525 40%, #d3252500 180%)' }} />
       
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 z-10 max-w-2xl">
         Let&apos;s discuss about how we can help make your business more <span className="text-primary tracking-normal font-cursive italic">secured</span>
       </h2>
       
       <HoverBorderGradient
-        containerClassName="rounded-full z-10"
-        as="button"
-        className="bg-[#172320] text-primary dark:text-primary flex items-center px-8 md:px-12"
+       containerClassName="rounded-full"
+       as="button"
+       className="bg-background text-black dark:text-white flex items-center px-8 md:px-12 text-xs"
       >
-        {/* Get consultation <ArrowRight className="ml-2"  /> */}
+        Get consultation <ArrowRight className="ml-2"  />
       </HoverBorderGradient>
     </motion.div>
   );

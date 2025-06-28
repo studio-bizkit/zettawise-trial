@@ -42,10 +42,10 @@ export function TestimonialCard({
       className={cn(
         "mb-4 flex w-full cursor-pointer break-inside-avoid flex-col items-center justify-between gap-6 p-4 rounded-3xl overflow-visible",
         // light styles
-        "border border-neutral-200 bg-white hover:border-[#3aa68f]/10 hover:[box-shadow:0_0_10px_#3aa68f,0_0_20px_#3aa68f] transition-shadow duration-300",
+        "border border-neutral-200 bg-white hover:border-[#d32525]/10 hover:[box-shadow:0_0_10px_#d32525,0_0_20px_#d32525] transition-shadow duration-300",
 
         // dark styles
-        "dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] hover:[box-shadow:0_0_20px_#3aa68f,0_0_40px_#3aa68f] transition-shadow duration-300",
+        "dark:bg-black dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] hover:[box-shadow:0_0_20px_#d32525,0_0_40px_#d32525] transition-shadow duration-300",
         className
       )}
       {...props}

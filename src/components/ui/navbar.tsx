@@ -49,7 +49,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <img
-              src="/images/logo.png"
+              src="/images/logo-old.png"
               alt="logo"
               className="h-6 dark:invert-0 invert-100"
             />
